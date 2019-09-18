@@ -1,0 +1,15 @@
+@prefix ex: <http://example.org/data/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+# ex:BJHabibie a ex:Person .
+# ex:BJHabibie ex:holdsOffice [ ex:office ex:PresidentOfIndonesia ; 
+#                               ex:startDate "1998-05-21"^^xsd:date ; 
+#                               ex:endDate "1999-10-20"^^xsd:date 
+#                               ] ;
+#              ex:hasSon ex:IlhamAkbarHabibie, ex:ThareqKemalHabibie .
+
+ex:MuhammadVolyandoBelvadra a ex:Student .
+ex:MuhammadVolyandoBelvadra 
