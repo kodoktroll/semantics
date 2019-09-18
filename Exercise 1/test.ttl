@@ -11,5 +11,166 @@
 #                               ] ;
 #              ex:hasSon ex:IlhamAkbarHabibie, ex:ThareqKemalHabibie .
 
-ex:MuhammadVolyandoBelvadra a ex:Student .
-ex:MuhammadVolyandoBelvadra 
+# @prefix ns0: <http://example.org/data/> .
+#
+# Matkul semester ini: 
+#
+# Desain dan Analisis Algoritma-C
+# Game Development
+# Pemrograman Fungsional
+# Bioinformatika
+# Jejaring Semantik
+# Kerja Praktik
+#
+# Matkul semester lalu: 
+#
+# Proyek Perangkat Lunak
+# MPPI-B
+# Pemrograman Logika
+# Analisis Numerik
+# Data Science and Analytics
+#
+
+ex:Mahasiswa rdf:type rdfs:Class .
+ex:Matkul rdf:type rdfs:Class .
+
+ex:IRS
+    rdf:type ex:Mahasiswa ;
+    ex:namaMahasiswa "Muhammad Volyando Belvadra" ;
+    ex:npmMahasiswa "1606918326" ; 
+    .
+
+# Current Term
+
+ex:Gamedev
+    rdf:type ex:Matkul ; 
+    ex:SKS "3"^^xsd:int ; 
+    .
+
+ex:FuncProg
+    rdf:type ex:Matkul ; 
+    ex:SKS "4"^^xsd:int ; 
+    .
+
+ex:BioInf
+    rdf:type ex:Matkul ; 
+    ex:SKS "3"^^xsd:int ; 
+    .
+
+ex:SemWeb
+    rdf:type ex:Matkul ; 
+    ex:SKS "3"^^xsd:int ; 
+    .
+
+ex:KP
+    rdf:type ex:Matkul ; 
+    ex:SKS "3"^^xsd:int ; 
+    .
+
+# Last Term
+
+ex:PPL
+    rdf:type ex:Matkul ; 
+    ex:SKS "6"^^xsd:int ; 
+    .
+
+ex:MPPI
+    rdf:type ex:Matkul ; 
+    ex:SKS "3"^^xsd:int ; 
+    .
+
+ex:PemLog
+    rdf:type ex:Matkul ; 
+    ex:SKS "4"^^xsd:int ; 
+    .
+
+ex:Anum
+    rdf:type ex:Matkul ; 
+    ex:SKS "3"^^xsd:int ; 
+    .
+
+ex:DSA
+    rdf:type ex:Matkul ; 
+    ex:SKS "3"^^xsd:int ; 
+    .
+
+# ex:Volyando rdf:type ex:Mahasiswa .
+# ex:Volyando ex:namaMahasiswa "Muhammad Volyando Belvadra" .
+# ex:Volyando ex:npmMahasiswa "1606918326" .
+
+
+# <http://example.org/data/IRSSagab>
+# a <http://example.org/data/IRS> ;
+# ns0:namaMahasiswa ns0:AninditoBhagawanta ;
+# ns0:npmMahasiswa ns0:1606879230 ;
+# ns0:hasMatkul [
+# ns0:nama ns0:SemanticWeb ;
+# ns0:courseID ns0:CSCE604131 ;
+# ns0:lecturer ns0:Adila ;
+# ns0:jadwal [
+#     ns0:day "Rabu" ;
+#     ns0:startTime "08:00" ;
+#     ns0:endTime "08:50" ;
+#     ns0:ruang "2.2404"
+#     ], [
+#     ns0:day "Jumat" ;
+#     ns0:startTime "08:00" ;
+#     ns0:endTime "09:40" ;
+#     ns0:ruang "2.2404"
+#     ]
+#     ], [
+#     ns0:nama ns0:Bioinformatika ;
+#     ns0:courseID ns0:CSCE604130 ;
+#     ns0:lecturer ns0:IvanFanany ;
+#     ns0:jadwal [
+#     ns0:day "Selasa" ;
+#     ns0:startTime "16:00" ;
+#     ns0:endTime "17:40" ;
+#     ns0:ruang "A6.07"
+#     ], [
+#     ns0:day "Kamis" ;
+#     ns0:startTime "15:00" ;
+#     ns0:endTime "15:50" ;
+#     ns0:ruang "A6.07"
+#     ]
+#     ], [
+#     ns0:nama ns0:TKArsitekturInfrastruktur ;
+#     ns0:courseID ns0:CSCE604255 ;
+#     ns0:lecturer ns0:Rizal ;
+#     ns0:jadwal [
+#     ns0:day "Selasa" ;
+#     ns0:startTime "15:00" ;
+#     ns0:endTime "15:50" ;
+#     ns0:ruang "A2.07"
+#     ], [
+#     ns0:day "Kamis" ;
+#     ns0:startTime "13:00" ;
+#     ns0:endTime "14:40" ;
+#     ns0:ruang "A2.07"
+#     ]
+#     ], [
+#     ns0:nama ns0:DAA-B ;
+#     ns0:courseID ns0:CSCM604142 ;
+#     ns0:lecturer ns0:RajaOktovin ;
+#     ns0:jadwal [
+#     ns0:day "Senin" ;
+#     ns0:startTime "13:00" ;
+#     ns0:endTime "14:40" ;
+#     ns0:ruang "A2.06"
+#     ], [
+#     ns0:day "Rabu" ;
+#     ns0:startTime "14:00" ;
+#     ns0:endTime "15:40" ;
+#     ns0:ruang "A2.06"
+#     ]
+#     ], [
+#     ns0:nama ns0:KerjaPrkatik-A ;
+#     ns0:courseID ns0:CSGE604098 ;
+#     ns0:lecturer ns0:IisAfriyanti ;
+#     ns0:jadwal [
+#     ns0:day "Jumat" ;
+#     ns0:startTime "10:00" ;
+#     ns0:endTime "11:40" ;
+#     ns0:ruang "2.2301"
+#     ]
+#     ] .
