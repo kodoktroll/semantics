@@ -4,40 +4,258 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 
-# ex:BJHabibie a ex:Person .
-# ex:BJHabibie ex:holdsOffice [ ex:office ex:PresidentOfIndonesia ; 
-#                               ex:startDate "1998-05-21"^^xsd:date ; 
-#                               ex:endDate "1999-10-20"^^xsd:date 
-#                               ] ;
-#              ex:hasSon ex:IlhamAkbarHabibie, ex:ThareqKemalHabibie .
-
-# @prefix ns0: <http://example.org/data/> .
 #
 # Matkul semester ini: 
 #
 # Desain dan Analisis Algoritma-C
 # Game Development
-# Pemrograman Fungsional
+# Pemrograman Fungsional-B
 # Bioinformatika
 # Jejaring Semantik
-# Kerja Praktik
+# Kerja Praktik-F
 #
 # Matkul semester lalu: 
 #
-# Proyek Perangkat Lunak
+# Proyek Perangkat Lunak-C
 # MPPI-B
 # Pemrograman Logika
-# Analisis Numerik
-# Data Science and Analytics
+# Analisis Numerik-A
+# Data Science and Analytics-A
 #
 
 ex:Mahasiswa rdf:type rdfs:Class .
 ex:Matkul rdf:type rdfs:Class .
+ex:Term rdf:type rdfs:Class .
 
 ex:IRS
     rdf:type ex:Mahasiswa ;
     ex:namaMahasiswa "Muhammad Volyando Belvadra" ;
     ex:npmMahasiswa "1606918326" ; 
+    ex:hasTerm [
+        ex:term [
+            rdfs:subClassOf ex:Gasal20192020 ;
+            ex:hasMatkul [
+                rdfs:subClassOf ex:Gamedev ;   
+                ex:jadwalKelas [
+                    ex:jadwal [
+                        ex:day "Senin" ;
+                        ex:startTime "16:00:00"^^xsd:time ;
+                        ex:endTime "17:40:00"^^xsd:time ;
+                    ] ;
+                    ex:jadwal [
+                        ex:day "Rabu" ;
+                        ex:startTime "16:00:00"^^xsd:time ;
+                        ex:endTime "16:50:00"^^xsd:time ;
+                    ] ;
+                ] ;
+                ex:namaKelas "Gamedev" ;
+                ex:pengajar [
+                    ex:nama "Daya Adianto S.Kom., M.Kom." ;
+                ] ;
+            ] ;
+            ex:hasMatkul [
+                rdfs:subClassOf ex:FuncProg ;   
+                ex:jadwalKelas [
+                    ex:jadwal [
+                        ex:day "Selasa" ;
+                        ex:startTime "08:00:00"^^xsd:time ;
+                        ex:endTime "09:40:00"^^xsd:time ;
+                    ] ;
+                    ex:jadwal [
+                        ex:day "Kamis" ;
+                        ex:startTime "10:00:00"^^xsd:time ;
+                        ex:endTime "11:40:00"^^xsd:time ;
+                    ] ;
+                ] ;
+                ex:namaKelas "Functional Programming - B" ;
+                ex:pengajar [
+                    ex:nama "Dr. Ade Azurat" ;
+                ] ;
+            ] ;
+            ex:hasMatkul [
+                rdfs:subClassOf ex:BioInf ;   
+                ex:jadwalKelas [
+                    ex:jadwal [
+                        ex:day "Selasa" ;
+                        ex:startTime "16:00:00"^^xsd:time ;
+                        ex:endTime "17:40:00"^^xsd:time ;
+                    ] ;
+                    ex:jadwal [
+                        ex:day "Kamis" ;
+                        ex:startTime "15:00:00"^^xsd:time ;
+                        ex:endTime "15:50:00"^^xsd:time ;
+                    ] ;
+                ] ;
+                ex:namaKelas "Bioinformatika" ;
+                ex:pengajar [
+                    ex:nama "Dr. Eng. Mohamad Ivan Fanany S.Si., M.Kom." ;
+                ] ;
+            ] ;
+            ex:hasMatkul [
+                rdfs:subClassOf ex:SemWeb ;   
+                ex:jadwalKelas [
+                    ex:jadwal [
+                        ex:day "Rabu" ;
+                        ex:startTime "08:00:00"^^xsd:time ;
+                        ex:endTime "08:50:00"^^xsd:time ;
+                    ] ;
+                    ex:jadwal [
+                        ex:day "Jumat" ;
+                        ex:startTime "08:00:00"^^xsd:time ;
+                        ex:endTime "09:40:00"^^xsd:time ;
+                    ] ;
+                ] ;
+                ex:namaKelas "Semantic Web" ;
+                ex:pengajar [
+                    ex:nama "Adila Alfa Krisnadhi S.Kom., M.Sc" ;
+                ] ;
+            ] ;
+            ex:hasMatkul [
+                rdfs:subClassOf ex:KP ;   
+                ex:jadwalKelas [
+                    ex:jadwal [
+                        ex:day "Jumat" ;
+                        ex:startTime "10:00:00"^^xsd:time ;
+                        ex:endTime "11:40:00"^^xsd:time ;
+                    ] ;
+                ] ;
+                ex:namaKelas "Kerja Praktik - F" ;
+                ex:pengajar [
+                    ex:nama "Meganingrum Arista Jiwanggi S.Kom., M.Kom., M.Com.Sc." ;
+                ] ;
+            ] ;
+            ex:hasMatkul [
+                rdfs:subClassOf ex:DAA ;   
+                ex:jadwalKelas [
+                    ex:jadwal [
+                        ex:day "Senin" ;
+                        ex:startTime "13:00:00"^^xsd:time ;
+                        ex:endTime "14:40:00"^^xsd:time ;
+                    ] ;
+                    ex:jadwal [
+                        ex:day "Rabu" ;
+                        ex:startTime "14:00:00"^^xsd:time ;
+                        ex:endTime "15:40:00"^^xsd:time ;
+                    ] ;
+                ] ;
+                ex:namaKelas "Desain dan Analisis Algoritma - C" ;
+                ex:pengajar [
+                    ex:nama "Arlisa Yuliawati S.Kom, M.Kom." ;
+                ] ;
+            ] ;
+        ] ;
+
+        ex:term [
+            rdfs:subClassOf ex:Genap20182019 ;
+            ex:hasMatkul [
+                rdfs:subClassOf ex:PPL ;   
+                ex:jadwalKelas [
+                    ex:jadwal [
+                        ex:day "Selasa" ;
+                        ex:startTime "10:00:00"^^xsd:time ;
+                        ex:endTime "12:30:00"^^xsd:time ;
+                    ] ;
+                    ex:jadwal [
+                        ex:day "Kamis" ;
+                        ex:startTime "10:00:00"^^xsd:time ;
+                        ex:endTime "12:30:00"^^xsd:time ;
+                    ] ;
+                ] ;
+                ex:namaKelas "PPL - C" ;
+                ex:pengajar [
+                    ex:nama "Dr. Ade Azurat" ;
+                    ex:nama "Gladhi Guarddin S.Kom, M.Kom" ;
+                ] ;
+            ] ;
+            ex:hasMatkul [
+                rdfs:subClassOf ex:MPPI ;   
+                ex:jadwalKelas [
+                    ex:jadwal [
+                        ex:day "Rabu" ;
+                        ex:startTime "14:00:00"^^xsd:time ;
+                        ex:endTime "15:40:00"^^xsd:time ;
+                    ] ;
+                    ex:jadwal [
+                        ex:day "Jumat" ;
+                        ex:startTime "08:00:00"^^xsd:time ;
+                        ex:endTime "08:50:00"^^xsd:time ;
+                    ] ;
+                ] ;
+                ex:namaKelas "MPPI - B" ;
+                ex:pengajar [
+                    ex:nama "Dr. Dra. Kasiyah M.Sc" ;
+                ] ;
+            ] ;
+            ex:hasMatkul [
+                rdfs:subClassOf ex:PemLog ;   
+                ex:jadwalKelas [
+                    ex:jadwal [
+                        ex:day "Senin" ;
+                        ex:startTime "13:00:00"^^xsd:time ;
+                        ex:endTime "14:40:00"^^xsd:time ;
+                    ] ;
+                    ex:jadwal [
+                        ex:day "Rabu" ;
+                        ex:startTime "08:00:00"^^xsd:time ;
+                        ex:endTime "09:40:00"^^xsd:time ;
+                    ] ;
+                ] ;
+                ex:namaKelas "Pemrograman Logika" ;
+                ex:pengajar [
+                    ex:nama "Ari Saptawijaya S.Kom., M.Sc., Ph.D." ;
+                ] ;
+            ] ;
+            ex:hasMatkul [
+                rdfs:subClassOf ex:Anum ;   
+                ex:jadwalKelas [
+                    ex:jadwal [
+                        ex:day "Senin" ;
+                        ex:startTime "10:00:00"^^xsd:time ;
+                        ex:endTime "11:40:00"^^xsd:time ;
+                    ] ;
+                    ex:jadwal [
+                        ex:day "Kamis" ;
+                        ex:startTime "09:00:00"^^xsd:time ;
+                        ex:endTime "09:50:00"^^xsd:time ;
+                    ] ;
+                ] ;
+                ex:namaKelas "Anum - A" ;
+                ex:pengajar [
+                    ex:nama "Prof. Drs. T. Basaruddin M.Sc., Ph.D" ;
+                    ex:nama "Raja Oktovin Parhasian Damanik S.Kom., M.Sc." ;
+                ] ;
+            ] ;
+            ex:hasMatkul [
+                rdfs:subClassOf ex:DSA ;   
+                ex:jadwalKelas [
+                    ex:jadwal [
+                        ex:day "Rabu" ;
+                        ex:startTime "10:00:00"^^xsd:time ;
+                        ex:endTime "11:40:00"^^xsd:time ;
+                    ] ;
+                    ex:jadwal [
+                        ex:day "Jumat" ;
+                        ex:startTime "09:00:00"^^xsd:time ;
+                        ex:endTime "09:50:00"^^xsd:time ;
+                    ] ;
+                ] ;
+                ex:namaKelas "Data Science and Analytics - A" ;
+                ex:pengajar [
+                    ex:nama "Dr. Eng. Mohamad Ivan Fanany S.Si., M.Kom." ;
+                ] ;
+            ] ;
+        ] ;
+    ] ;
+    .
+
+ex:Gasal20192020
+    rdf:type ex:Term ;
+    ex:termYear "2019/2020" ;
+    .
+
+ex:Genap20182019
+    rdf:type ex:Term ;
+    ex:termYear "2018/2019" ;
     .
 
 # Current Term
@@ -45,26 +263,37 @@ ex:IRS
 ex:Gamedev
     rdf:type ex:Matkul ; 
     ex:SKS "3"^^xsd:int ; 
+    ex:courseID "CSCE604121" ;
     .
 
 ex:FuncProg
     rdf:type ex:Matkul ; 
     ex:SKS "4"^^xsd:int ; 
+    ex:courseID "CSCE604123" ;
     .
 
 ex:BioInf
     rdf:type ex:Matkul ; 
     ex:SKS "3"^^xsd:int ; 
+    ex:courseID "CSCE604130" ;
     .
 
 ex:SemWeb
     rdf:type ex:Matkul ; 
     ex:SKS "3"^^xsd:int ; 
+    ex:courseID "CSCE604131" ;
     .
 
 ex:KP
     rdf:type ex:Matkul ; 
     ex:SKS "3"^^xsd:int ; 
+    ex:courseID "CSGE604098" ;
+    .
+
+ex:DAA
+    rdf:type ex:Matkul ; 
+    ex:SKS "4"^^xsd:int ; 
+    ex:courseID "CSCM604142" ;
     .
 
 # Last Term
@@ -72,105 +301,29 @@ ex:KP
 ex:PPL
     rdf:type ex:Matkul ; 
     ex:SKS "6"^^xsd:int ; 
+    ex:courseID "CSCM603228" ;
     .
 
 ex:MPPI
     rdf:type ex:Matkul ; 
     ex:SKS "3"^^xsd:int ; 
+    ex:courseID "CSGE603291" ;
     .
 
 ex:PemLog
     rdf:type ex:Matkul ; 
     ex:SKS "4"^^xsd:int ; 
+    ex:courseID "CSCE604222" ;
     .
 
 ex:Anum
     rdf:type ex:Matkul ; 
     ex:SKS "3"^^xsd:int ; 
+    ex:courseID "CSCM603217" ;
     .
 
 ex:DSA
     rdf:type ex:Matkul ; 
     ex:SKS "3"^^xsd:int ; 
+    ex:courseID "CSCM603234" ;
     .
-
-# ex:Volyando rdf:type ex:Mahasiswa .
-# ex:Volyando ex:namaMahasiswa "Muhammad Volyando Belvadra" .
-# ex:Volyando ex:npmMahasiswa "1606918326" .
-
-
-# <http://example.org/data/IRSSagab>
-# a <http://example.org/data/IRS> ;
-# ns0:namaMahasiswa ns0:AninditoBhagawanta ;
-# ns0:npmMahasiswa ns0:1606879230 ;
-# ns0:hasMatkul [
-# ns0:nama ns0:SemanticWeb ;
-# ns0:courseID ns0:CSCE604131 ;
-# ns0:lecturer ns0:Adila ;
-# ns0:jadwal [
-#     ns0:day "Rabu" ;
-#     ns0:startTime "08:00" ;
-#     ns0:endTime "08:50" ;
-#     ns0:ruang "2.2404"
-#     ], [
-#     ns0:day "Jumat" ;
-#     ns0:startTime "08:00" ;
-#     ns0:endTime "09:40" ;
-#     ns0:ruang "2.2404"
-#     ]
-#     ], [
-#     ns0:nama ns0:Bioinformatika ;
-#     ns0:courseID ns0:CSCE604130 ;
-#     ns0:lecturer ns0:IvanFanany ;
-#     ns0:jadwal [
-#     ns0:day "Selasa" ;
-#     ns0:startTime "16:00" ;
-#     ns0:endTime "17:40" ;
-#     ns0:ruang "A6.07"
-#     ], [
-#     ns0:day "Kamis" ;
-#     ns0:startTime "15:00" ;
-#     ns0:endTime "15:50" ;
-#     ns0:ruang "A6.07"
-#     ]
-#     ], [
-#     ns0:nama ns0:TKArsitekturInfrastruktur ;
-#     ns0:courseID ns0:CSCE604255 ;
-#     ns0:lecturer ns0:Rizal ;
-#     ns0:jadwal [
-#     ns0:day "Selasa" ;
-#     ns0:startTime "15:00" ;
-#     ns0:endTime "15:50" ;
-#     ns0:ruang "A2.07"
-#     ], [
-#     ns0:day "Kamis" ;
-#     ns0:startTime "13:00" ;
-#     ns0:endTime "14:40" ;
-#     ns0:ruang "A2.07"
-#     ]
-#     ], [
-#     ns0:nama ns0:DAA-B ;
-#     ns0:courseID ns0:CSCM604142 ;
-#     ns0:lecturer ns0:RajaOktovin ;
-#     ns0:jadwal [
-#     ns0:day "Senin" ;
-#     ns0:startTime "13:00" ;
-#     ns0:endTime "14:40" ;
-#     ns0:ruang "A2.06"
-#     ], [
-#     ns0:day "Rabu" ;
-#     ns0:startTime "14:00" ;
-#     ns0:endTime "15:40" ;
-#     ns0:ruang "A2.06"
-#     ]
-#     ], [
-#     ns0:nama ns0:KerjaPrkatik-A ;
-#     ns0:courseID ns0:CSGE604098 ;
-#     ns0:lecturer ns0:IisAfriyanti ;
-#     ns0:jadwal [
-#     ns0:day "Jumat" ;
-#     ns0:startTime "10:00" ;
-#     ns0:endTime "11:40" ;
-#     ns0:ruang "2.2301"
-#     ]
-#     ] .
